@@ -16,6 +16,7 @@ RUN tar xf gluex_install.tar
 RUN find gluex_install-* -type f -exec mv -v {} . \;
 RUN ./gluex_prereqs_centos.sh
 RUN yum -y install which sqlite-devel
+RUN mkdir -v /group
 
 # make the cvmfs filesystem visible inside the container
 VOLUME /cvmfs/oasis.opensciencegrid.org
