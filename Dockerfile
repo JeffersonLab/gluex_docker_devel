@@ -15,7 +15,7 @@ ADD https://halldweb.jlab.org/dist/gluex_install.tar /
 RUN tar xf gluex_install.tar
 RUN find gluex_install-* -type f -exec mv -v {} . \;
 RUN ./gluex_prereqs_centos.sh
-RUN yum -y install which sqlite-devel
+RUN yum -y install which sqlite-devel bc
 RUN ln -sv /cvmfs/oasis.opensciencegrid.org/gluex/group /group
 
 # make the cvmfs filesystem visible inside the container
