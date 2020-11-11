@@ -11,9 +11,9 @@
 
 FROM centos:centos7.7.1908
 
-ADD https://github.com/JeffersonLab/gluex_install/archive/2.12.tar.gz /
-RUN tar zxvf 2.12.tar.gz
-RUN gluex_install-2.12/gluex_prereqs_centos_7.sh
+ADD https://github.com/JeffersonLab/gluex_install/archive/2.15.tar.gz /
+RUN tar zxvf 2.15.tar.gz
+RUN gluex_install-2.15/gluex_prereqs_centos_7.sh
 RUN mkdir /cvmfs
 RUN ln -s cvmfs/oasis.opensciencegrid.org/gluex/group /group
 # make the cvmfs filesystem visible inside the container
